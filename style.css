@@ -178,6 +178,8 @@ main {
             p {
                 color: black;
                 text-align: center;
+                width: 100%;
+                overflow-wrap: break-word;
             }
         }
 
@@ -216,6 +218,10 @@ main {
 
 .txt-file {
     font-family: PxSansNouveaux;
+    width: 40%;
+    height: 80%;
+    top: 10%;
+    left: 30%;
 
     .content {
         display: block;
@@ -230,6 +236,22 @@ main {
         &:not(:first-of-type) {
             margin-block-start: 2em;
         }
+    }
+}
+
+.browser {
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+
+    .content {
+        display: block;
+        padding: 0;
+    }
+
+    iframe {
+        height: 100%;
     }
 }
 
@@ -257,4 +279,9 @@ footer {
 
         img {display: block;}
     }
+}
+
+.content:has( #trash) {
+    display: flex;
+    overflow: scroll;
 }
